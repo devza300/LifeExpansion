@@ -3,7 +3,8 @@ CONFIG += ordered
 
 SUBDIRS += \
     client \
-    life
+    life \
+    lifeExCore
 
 DISTFILES += \
     LICENSE \
