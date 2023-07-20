@@ -4,14 +4,14 @@
 #include <QObject>
 #include <QUuid>
 
-#include "CellGround.h"
-#include "CellLive.h"
-#include "LifeExCore.h"
+#include "Ground.h"
+#include "Cell.h"
+#include "LifeCore.h"
 
 class PlayerInterface
 {
 public:
-    PlayerInterface(LifeExCore *core, QUuid uuid);
+    PlayerInterface(LifeCore *core, QUuid uuid);
 
     quint32 maxLiveCellCount() const;
 
@@ -25,14 +25,14 @@ public:
 
 //    void insertCells(const QList<QPoint> &coordinates);
 
-    void insertLiveCells(const QList<CellLive> &cells);
-
-    void modifyGround(const QList<CellGround> &cells);
+    void insertLiveCells(const QList<Cell> &cells);
+    
+    void modifyGround(const QList<Ground> &cells);
 
 private:
     QUuid mm_uuid;
-
-    LifeExCore *ptr_core;
+    
+    LifeCore *ptr_core;
 
 };
 

@@ -2,10 +2,11 @@ TEMPLATE = subdirs
 CONFIG += ordered
 
 SUBDIRS += \
+    lifeCore \
     client \
-    life \
-    lifeExCore
+    life
 
 DISTFILES += \
     LICENSE \
+    LifeExpansion.pri \
     README.md

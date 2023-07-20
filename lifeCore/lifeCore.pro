@@ -10,15 +10,17 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    CellGround.cpp \
-    CellLive.cpp \
-    LifeExCore.cpp \
+    Cell.cpp \
+    GameMap.cpp \
+    Ground.cpp \
+    LifeCore.cpp \
     PlayerInterface.cpp
 
 HEADERS += \
-    CellGround.h \
-    CellLive.h \
-    LifeExCore.h \
+    Cell.h \
+    GameMap.h \
+    Ground.h \
+    LifeCore.h \
     PlayerInterface.h
 
 # Default rules for deployment.

@@ -1,26 +1,26 @@
-#ifndef CELLLIVE_H
-#define CELLLIVE_H
+#ifndef CELL_H
+#define CELL_H
 
 #include <QPoint>
 #include <QTimer>
 #include <QUuid>
 
-class CellLive
+class Cell
 {
-    enum LiveType
+    enum Type
     {
-
+        Regular,
     };
 
 public:
-    CellLive();
+    Cell();
 
 private:
     QPoint mm_point;
-    LiveType mm_type;
+    Type mm_type;
 
     QUuid mm_playerUuid;
 
 };
 
-#endif // CELLLIVE_H
+#endif // CELL_H
