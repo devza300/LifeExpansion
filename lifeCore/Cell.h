@@ -2,7 +2,6 @@
 #define CELL_H
 
 #include <QPoint>
-#include <QTimer>
 #include <QUuid>
 
 class Cell
@@ -10,6 +9,8 @@ class Cell
     enum Type
     {
         Regular,
+
+        // new cell types will be created in the future
     };
 
 public:

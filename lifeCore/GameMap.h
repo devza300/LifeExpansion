@@ -10,28 +10,19 @@ class GameMap
 {
 public:
     GameMap(const QRect &rect = QRect(),
-            const QList<Ground> &groundList = {},
+            const QList<Ground> &ground = {},
             const QList<QPoint> &homePoints = {});
 
+    GameMap(const QString &path);
+
     QPoint getMapRect() const;
-
-    void setMapRect(const QRect &rect);
-
-
     QList<Ground> getGround() const;
-
-    void addGround(const Ground &ground);
-    void addGround(const QList<Ground> &groundList);
-
-
     QList<QPoint> getHomePoints() const;
 
-    void addHomePoint(const QPoint &point);
-    void addHomePoint(const QList<QPoint> &pointList);
-
 private:
-    QRect mm_mapRect;
-    QList<Ground> mm_groundList;
+    QRect mm_mapRect;               //!< размер карты
+
+    QList<Ground> mm_ground;        //!<
     QList<QPoint> mm_homePoints;
 
 };

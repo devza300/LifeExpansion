@@ -6,6 +6,7 @@ class Ground
 {
     enum Type
     {
+        EndOfMap,
         Plain,
         Wall
     };

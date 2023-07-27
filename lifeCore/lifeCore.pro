@@ -14,6 +14,7 @@ SOURCES += \
     GameMap.cpp \
     Ground.cpp \
     LifeCore.cpp \
+    MapBuilder.cpp \
     PlayerInterface.cpp
 
 HEADERS += \
@@ -21,6 +22,7 @@ HEADERS += \
     GameMap.h \
     Ground.h \
     LifeCore.h \
+    MapBuilder.h \
     PlayerInterface.h
 
 # Default rules for deployment.

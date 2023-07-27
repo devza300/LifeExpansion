@@ -4,35 +4,44 @@
 #include <QObject>
 #include <QUuid>
 
-#include "Ground.h"
 #include "Cell.h"
+#include "Ground.h"
 #include "LifeCore.h"
 
-class PlayerInterface
+class PlayerInterface : public QObject
 {
+    Q_OBJECT
+
 public:
     PlayerInterface(LifeCore *core, QUuid uuid);
 
+    QUuid getUuid() const;
+
     quint32 maxLiveCellCount() const;
 
-    quint32 currentLiveCellCount() const;
+    QList<QPoint> mapVision() const;
 
-    quint32 availaleLiveCellCount() const;
+public slots:
+    void reloadArea(const QList<QPoint> &points);
 
-    QList<QPoint> mapVisibility() const;
+signals:
+    void visionChanged(const QList<QPoint> &points);
 
-    QList<QPoint> mapSmoke() const;
+    void cellsRise(const QList<Cell> &cells);
 
-//    void insertCells(const QList<QPoint> &coordinates);
+    void cellsDie(const QList<Cell> &cells);
 
-    void insertLiveCells(const QList<Cell> &cells);
-    
-    void modifyGround(const QList<Ground> &cells);
+    void maxCellCountChenged(quint32 maximum);
+
+    void groundData(const QList<Ground> &data);
 
 private:
-    QUuid mm_uuid;
-    
-    LifeCore *ptr_core;
+    QUuid mm_uuid;                  //!< идентификатор игрока
+
+    QList<Cell> mm_cells;           //!< доступные игроку клетки (видимые)
+    QList<Ground> mm_ground;        //!< изученная игроком почва
+
+    quint32 mm_maximumCellCount;    //!< максимальное количество клеток, доступных для создания
 
 };
 
