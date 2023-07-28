@@ -8,7 +8,7 @@ VERSION = "$$MAJOR"."$$MINOR"
 
 # глобальные переменные
 DEFINES += ORGANIZATION_NAME='\\"CppLessons2023\\"'
-DEFINES += ORGANIZATION_DOMAIN='\\"https://github.com/devza300/CppLessons2023\\"'
+DEFINES += ORGANIZATION_DOMAIN='\\"https://github.com/devza300/LifeExpansion\\"'
 DEFINES += GIT_VERSION='\\"$$GIT_VERSION\\"'
 DEFINES += VERSION='\\"$$VERSION\\"'
 DEFINES += PROJECT_NAME='\\"LifeExpansion\\"'
