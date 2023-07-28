@@ -11,6 +11,7 @@ CONFIG += c++17
 
 SOURCES += \
     Cell.cpp \
+    Cells/AbstractCell.cpp \
     GameMap.cpp \
     Ground.cpp \
     LifeCore.cpp \
@@ -19,6 +20,8 @@ SOURCES += \
 
 HEADERS += \
     Cell.h \
+    Cells/AbstractCell.h \
+    Cells/CellDefinitions.h \
     GameMap.h \
     Ground.h \
     LifeCore.h \
