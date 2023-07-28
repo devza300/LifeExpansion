@@ -3,9 +3,7 @@
 
 #include <QObject>
 #include <QUuid>
-
-#include "Cell.h"
-#include "Ground.h"
+#include <QPoint>
 #include "LifeCore.h"
 
 class PlayerInterface : public QObject
@@ -27,19 +25,8 @@ public slots:
 signals:
     void visionChanged(const QList<QPoint> &points);
 
-    void cellsRise(const QList<Cell> &cells);
-
-    void cellsDie(const QList<Cell> &cells);
-
-    void maxCellCountChenged(quint32 maximum);
-
-    void groundData(const QList<Ground> &data);
-
 private:
     QUuid mm_uuid;                  //!< идентификатор игрока
-
-    QList<Cell> mm_cells;           //!< доступные игроку клетки (видимые)
-    QList<Ground> mm_ground;        //!< изученная игроком почва
 
     quint32 mm_maximumCellCount;    //!< максимальное количество клеток, доступных для создания
 

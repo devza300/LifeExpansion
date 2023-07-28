@@ -3,8 +3,6 @@
 
 #include <QMainWindow>
 
-#include "LifeCore.h"
-
 namespace Ui {
 class MainWindow;
 }
@@ -22,8 +20,6 @@ private:
 
 private:
     Ui::MainWindow *ui;
-
-    LifeCore *ptr_core;
 
 };
 

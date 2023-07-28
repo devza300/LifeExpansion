@@ -1,5 +1,7 @@
 #include "LifeCore.h"
 
-LifeCore::LifeCore()
+LifeCore::LifeCore(QObject *parent) :
+    QObject(parent)
 {
+
 }

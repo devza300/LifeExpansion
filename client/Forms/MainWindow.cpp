@@ -15,12 +15,5 @@ MainWindow::~MainWindow()
 
 void MainWindow::startNewGame()
 {
-    if (!ptr_core)
-        delete ptr_core;
-
-    ptr_core = new LifeExCore();
-
-    ptr_core->createPlayer();
-
 
 }
